@@ -1,0 +1,100 @@
+[
+	{
+		"name": "teraslice",
+		"rootPath": "$home/Projects/teraslice",
+		"paths": [],
+		"group": "Teraslice",
+		"enabled": true
+	},
+	{
+		"name": "kafka-assets",
+		"rootPath": "$home/Projects/kafka-assets",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "dotfiles",
+		"rootPath": "/Users/peter/Projects/dotfiles",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "elasticsearch-assets",
+		"rootPath": "/Users/peter/Projects/elasticsearch-assets",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "spaces",
+		"rootPath": "/Users/peter/Projects/spaces",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "standard-assets",
+		"rootPath": "/Users/peter/Projects/standard-assets",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "file-assets",
+		"rootPath": "/Users/peter/Projects/file-assets",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "hdfs-assets",
+		"rootPath": "/Users/peter/Projects/hdfs-assets",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "common_assets",
+		"rootPath": "/Users/peter/Projects/common_assets",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "fetch-github-release",
+		"rootPath": "/Users/peter/Projects/fetch-github-release",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "import",
+		"rootPath": "/Users/peter/Projects/import",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "node-rdkafka",
+		"rootPath": "/Users/peter/Projects/node-rdkafka",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "notes",
+		"rootPath": "/Users/peter/Projects/notes",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+    {
+		"name": "base-docker-image",
+		"rootPath": "/Users/peter/Projects/base-docker-image",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	}
+]

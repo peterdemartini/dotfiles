@@ -1,0 +1,64 @@
+[user]
+	name = peterdemartini
+	email = thepeterdemartini@gmail.com
+	signingkey = EABF37E3
+[core]
+	email = thepeterdemartini@gmail.com
+	user = Peter DeMartini
+	editor = /usr/local/bin/vim
+    excludesfile = /Users/peter/.gitignore_global
+    autocrlf = input
+    ignoreCase = false
+    pager = delta
+[help]
+	autocorrect = 0
+[push]
+	default = current
+[branch]
+	autosetupmerge = true
+[commit]
+	gpgsign = true
+[alias]
+	dad = !curl https://icanhazdadjoke.com/ && git add
+    cu = !git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d
+	lg = log --abbrev-commit --pretty=format:'%C(white)>>%Creset %C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph  --decorate
+    bl = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+[status]
+    showstash = true
+    short = true
+    branch = false
+    showUntrackedFiles = all
+[remote "origin"]
+ 	prune = true
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = code
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[delta]
+    dark = true
+    line-numbers = true
+    diff-so-fancy = true
+[interactive]
+    diffFilter = delta --color-only
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg
+[pull]
+	ff = only
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[init]
+	defaultBranch = main

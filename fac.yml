@@ -1,0 +1,15 @@
+select_local: a
+select_incoming: b
+toggle_view: c
+show_up: d
+show_down: e
+scroll_up: f
+scroll_down: g
+edit: h
+next: i
+previous: j
+quit: k
+help: l
+
+# Set to `true` to skip having to press enter when entering commands
+cont_eval: true

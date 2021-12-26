@@ -1,0 +1,4 @@
+[git-together]
+  active = peter
+[git-together "authors"]
+  peter = "Peter DeMartini; thepeterdemartini@gmail.com"

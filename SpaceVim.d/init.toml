@@ -1,0 +1,81 @@
+# This is a basic configuration example for SpaceVim
+
+# All SpaceVim options are below [options] snippet
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer, the value of this option is a string.
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors, the type of the value is boolean, true or false.
+    enable_guicolors = true
+
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "nil"
+    statusline_separator = "bar"
+    buffer_index_type = 4
+
+    # Display file type icon on the tabline, If you do not have nerd fonts
+    # installed, please change the value to false
+    enable_tabline_filetype_icon = true
+
+    # Display current mode text on statusline, by default It is disabled,
+    # only color will be changed when switch modes.
+    enable_statusline_mode = false
+
+    # add custom vim setup
+    # bootstrap_before = "config#before"
+    # bootstrap_after = "config#after"
+    
+    # Enable coc for autocompletion
+    autocomplete_method = "coc"
+
+    filetree_direction = "left"
+
+[[layers]]
+    name = "autocomplete"
+    auto-completion-return-key-behavior = "complete"
+    auto-completion-tab-key-behavior = "cycle"
+
+[[layers]]
+    name = "shell"
+    default_position = "bottom"
+    default_height = 30
+
+[[layers]]
+    name = "lang#typescript"
+
+[[layers]]
+    name = "lang#javascript"
+
+[[layers]]
+    name = "lang#json"
+
+[[layers]]
+    name = "lang#html"
+
+[[layers]]
+    name = "lang#dockerfile"
+
+[[layers]]
+    name = "lang#markdown"
+
+[[layers]]
+    name = "denite"
+
+[[layers]]
+    name = "tools"
+
+[[layers]]
+    name = "checkers"
+
+[[layers]]
+    name = "git"
+
+# This is an example for adding custom plugins lilydjwg/colorizer
+[[custom_plugins]]
+    repo = "lilydjwg/colorizer"
+    merged = false

@@ -1,0 +1,9 @@
+.DS_Store
+.tags
+.tern-port
+.vscode/*
+.prettierrc.json
+.prettierignore
+*.local.*
+.local.*
+.clinic

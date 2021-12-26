@@ -1,0 +1,2 @@
+DOTFILES_DIRS="/Users/peter/Projects/dotfiles"
+EXCLUDES="README.md LICENSE rcrc scripts bootstrap.sh Brewfile Alfred.alfredpreferences"
