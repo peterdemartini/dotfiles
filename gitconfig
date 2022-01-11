@@ -1,7 +1,7 @@
 [user]
 	name = peterdemartini
 	email = thepeterdemartini@gmail.com
-	signingkey = EABF37E3
+	signingkey = FA64A645
 [core]
 	email = thepeterdemartini@gmail.com
 	user = Peter DeMartini
@@ -23,11 +23,11 @@
     cu = !git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d
 	lg = log --abbrev-commit --pretty=format:'%C(white)>>%Creset %C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph  --decorate
     bl = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
-[status]
-    showstash = true
-    short = true
-    branch = false
-    showUntrackedFiles = all
+# [status]
+    # showstash = true
+    # short = true
+    # branch = false
+    # showUntrackedFiles = all
 [remote "origin"]
  	prune = true
 [mergetool "Kaleidoscope"]
@@ -62,3 +62,5 @@
 	required = true
 [init]
 	defaultBranch = main
+[url "git@github.com:"]
+    insteadOf = "https://github.com/"

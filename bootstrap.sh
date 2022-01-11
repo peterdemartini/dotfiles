@@ -31,10 +31,3 @@ esac
 
 cp ./rcrc ~/.rcrc
 rcup
-
-curl -L https://get.oh-my.fish | fish
-omf install && omf reload
-
-which fish | sudo tee -a /etc/shells
-
-chsh -s /usr/local/bin/fish

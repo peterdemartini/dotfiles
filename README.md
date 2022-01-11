@@ -13,7 +13,6 @@ My configuration files
 - [VS Code](https://code.visualstudio.com/download)   
 - [Sublime Merge](https://www.sublimemerge.com/download)
 - [Alfred App](https://www.alfredapp.com/)
-    - `cp -rfp Alfred.alfredpreferences /Users/peter/Library/Application\ Support/Alfred/Alfred.alfredpreferences`
 - [Numi App](https://numi.app/)
 - [Command-E](https://getcommande.com/)
 - [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704?mt=12)
