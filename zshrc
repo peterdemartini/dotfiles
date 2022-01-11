@@ -23,6 +23,7 @@ plugins=(
     macos
     vscode
     zsh-syntax-highlighting
+    zsh-history-substring-search
     zsh-autosuggestions
 )
 source $ZSH/oh-my-zsh.sh
