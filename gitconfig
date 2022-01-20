@@ -1,15 +1,15 @@
 [user]
 	name = peterdemartini
-	email = thepeterdemartini@gmail.com
+	email = peter.demartini@segment.com
 	signingkey = FA64A645
 [core]
-	email = thepeterdemartini@gmail.com
+	email = peter.demartini@segment.com
 	user = Peter DeMartini
-	editor = /usr/local/bin/vim
-    excludesfile = /Users/peter/.gitignore_global
-    autocrlf = input
-    ignoreCase = false
-    pager = delta
+	editor = /usr/local/bin/nvim
+  excludesfile = /Users/peter/.gitignore_global
+  autocrlf = input
+  ignoreCase = false
+  pager = delta
 [help]
 	autocorrect = 0
 [push]
@@ -20,9 +20,9 @@
 	gpgsign = true
 [alias]
 	dad = !curl https://icanhazdadjoke.com/ && git add
-    cu = !git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d
+  cu = !git branch --merged | egrep -v \"(^\\*|master|main|develop)\" | xargs git branch -d
 	lg = log --abbrev-commit --pretty=format:'%C(white)>>%Creset %C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph  --decorate
-    bl = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+  bl = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 # [status]
     # showstash = true
     # short = true
@@ -44,11 +44,11 @@
 [diff]
 	tool = Kaleidoscope
 [delta]
-    dark = true
-    line-numbers = true
-    diff-so-fancy = true
+  dark = true
+  line-numbers = true
+  diff-so-fancy = true
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [gpg]
 	program = /usr/local/MacGPG2/bin/gpg
 [pull]
@@ -63,4 +63,11 @@
 [init]
 	defaultBranch = main
 [url "git@github.com:"]
-    insteadOf = "https://github.com/"
+  insteadOf = "https://github.com/"
+[twilio]
+	username = pdemartini
+	segmentUsername = peter.demartini
+	segmentTeam = foundation
+	github = peterdemartini
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/

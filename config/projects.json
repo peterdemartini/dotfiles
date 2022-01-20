@@ -1,0 +1,30 @@
+[
+  {
+    "name": "dotfiles",
+    "rootPath": "~/dev/src/github.com/peterdemartini/dotfiles",
+    "paths": [],
+    "tags": ["Personal"],
+    "enabled": true
+  },
+  {
+    "name": "control-plane",
+    "rootPath": "~/dev/src/github.com/segmentio/control-plane",
+    "paths": [],
+    "tags": ["Work"],
+    "enabled": true
+  },
+  {
+    "name": "sprout",
+    "rootPath": "~/dev/src/github.com/segmentio/sprout",
+    "paths": [],
+    "tags": ["Work"],
+    "enabled": true
+  },
+  {
+    "name": "stats",
+    "rootPath": "/Users/peterdemartini/dev/src/github.com/segmentio/stats",
+    "paths": [],
+    "tags": ["Work"],
+    "enabled": true
+  }
+]

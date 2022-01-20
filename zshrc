@@ -10,14 +10,14 @@ fpath+=$HOME/.zfunc
 
 # -- oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="gozilla-v2"
+ZSH_THEME=""
 DEFAULT_USER=`whoami`
 ENABLE_CORRECTION="false"
 DISABLE_AUTO_UPDATE=true
 DISABLE_MAGIC_FUNCTIONS=true # Don't escape pasted input
 plugins=(
     git
-    golang
+    # golang
     aws
     iterm2
     macos
@@ -33,9 +33,27 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude vendor'
 
+# -- gnu
+
+alias sort='gsort'
+alias sed='gnu-sed'
+
+# -- Node.js / NVM
+
+# load_node () {
+#   unalias node
+#   unalias npm
+#   n 14
+# }
+
+# alias node='load_node; node $@'
+# alias npm='load_node; npm $@'
+
 # -- git
 
 alias gs='git status --short --no-branch --show-stash'
+# This will reset the stage branch from master
+alias gross="git fetch && git checkout master && git reset --hard origin/master && git push origin master:staging --force && git fetch && git checkout staging && git reset --hard origin/staging"
 
 eval "$(gh completion -s zsh)"
 
@@ -73,3 +91,9 @@ if [ -e $HOME/.segment ] ; then
   # Okta
   export AWS_OKTA_MFA_FACTOR_TYPE=push
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(starship init zsh)"
