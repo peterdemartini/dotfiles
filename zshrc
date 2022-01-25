@@ -38,6 +38,11 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclu
 alias sort='gsort'
 alias sed='gnu-sed'
 
+# -- vim
+
+alias vi='/opt/homebrew/bin/vim'
+alias vim='/opt/homebrew/bin/nvim'
+
 # -- Node.js / NVM
 
 # load_node () {
@@ -54,6 +59,8 @@ alias sed='gnu-sed'
 alias gs='git status --short --no-branch --show-stash'
 # This will reset the stage branch from master
 alias gross="git fetch && git checkout master && git reset --hard origin/master && git push origin master:staging --force && git fetch && git checkout staging && git reset --hard origin/staging"
+alias switch-to-branch="git bl --color=always | fzf | awk '{print \$1}' | xargs git checkout"
+alias switch-to-pr="gh pr list | fzf | awk '{print \$1}' | xargs gh pr checkout"
 
 eval "$(gh completion -s zsh)"
 

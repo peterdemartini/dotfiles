@@ -1,11 +1,11 @@
 [user]
-	name = peterdemartini
+	name = Peter DeMartini
 	email = peter.demartini@segment.com
 	signingkey = FA64A645
 [core]
 	email = peter.demartini@segment.com
 	user = Peter DeMartini
-	editor = /usr/local/bin/nvim
+	editor = /opt/homebrew/bin/vim
   excludesfile = /Users/peter/.gitignore_global
   autocrlf = input
   ignoreCase = false
@@ -57,9 +57,10 @@
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
 	show = diff-so-fancy | less --tabs=1,5 -RFX
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [init]
 	defaultBranch = main
 [url "git@github.com:"]

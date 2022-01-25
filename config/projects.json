@@ -26,5 +26,12 @@
     "paths": [],
     "tags": ["Work"],
     "enabled": true
+  },
+  {
+    "name": "platform-api",
+    "rootPath": "/Users/peterdemartini/dev/src/github.com/segmentio/platform-api",
+    "paths": [],
+    "tags": ["Work"],
+    "enabled": true
   }
 ]
