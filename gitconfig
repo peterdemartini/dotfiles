@@ -6,7 +6,7 @@
 	email = peter.demartini@segment.com
 	user = Peter DeMartini
 	editor = /opt/homebrew/bin/vim
-  excludesfile = /Users/peter/.gitignore_global
+  excludesfile = /Users/peterdemartini/.gitignore_global
   autocrlf = input
   ignoreCase = false
   pager = delta
