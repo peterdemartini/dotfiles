@@ -9,6 +9,7 @@ export PATH=$PATH:/usr/libexec
 export PATH=$PATH:/usr/X11/bin
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
+export PATH=$PATH:$HOME/.cargo/bin
 
 #
 # FZF
