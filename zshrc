@@ -24,9 +24,16 @@ plugins=(
     vscode
     zsh-syntax-highlighting
     zsh-history-substring-search
+    zsh-navigation-tools
     zsh-autosuggestions
+    zsh-interactive-cd
 )
 source $ZSH/oh-my-zsh.sh
+
+# Make sure that 
+autoload znt-history-widget
+zle -N znt-history-widget
+bindkey "^R" znt-history-widget
 
 # -- fzProjects
 
@@ -57,6 +64,7 @@ alias vim='/opt/homebrew/bin/nvim'
 # -- git
 
 alias gs='git status --short --no-branch --show-stash'
+alias gl='git checkout'
 # This will reset the stage branch from master
 alias gross="git fetch && git checkout master && git reset --hard origin/master && git push origin master:staging --force && git fetch && git checkout staging && git reset --hard origin/staging"
 alias switch-to-branch="git bl --color=always | fzf | awk '{print \$1}' | xargs git checkout"
