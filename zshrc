@@ -114,3 +114,5 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(starship init zsh)"
 
 source ~/.iterm2_shell_integration.zsh
+
+. $(brew --prefix asdf)/libexec/asdf.sh

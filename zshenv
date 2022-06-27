@@ -10,6 +10,7 @@ export PATH=$PATH:/usr/X11/bin
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.emacs.d/bin
 
 #
 # FZF
