@@ -46,6 +46,12 @@
     default_height = 30
 
 [[layers]]
+    name = "lang#go"
+
+[[layers]]
+    name = "format"
+
+[[layers]]
     name = "lang#typescript"
 
 [[layers]]
@@ -74,6 +80,9 @@
 
 [[layers]]
     name = "git"
+
+[[layers]]
+    name = "org"
 
 # This is an example for adding custom plugins lilydjwg/colorizer
 [[custom_plugins]]

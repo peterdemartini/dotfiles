@@ -30,15 +30,18 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-# Make sure that 
+# Make sure that this runs after the widgets the plugins are loaded
 autoload znt-history-widget
 zle -N znt-history-widget
 bindkey "^R" znt-history-widget
 
+# more fish like autosuggestions
+SH_AUTOSUGGEST_STRATEGY=(history completion) 
+
 # -- fzProjects
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude vendor'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude vendor --reverse'
 
 # -- gnu
 
@@ -60,6 +63,11 @@ alias vim='/opt/homebrew/bin/nvim'
 
 # alias node='load_node; node $@'
 # alias npm='load_node; npm $@'
+
+# GNU aliases
+
+alias sed='gsed'
+alias sort='gsort'
 
 # -- git
 
