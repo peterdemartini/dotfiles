@@ -51,11 +51,15 @@ export NODE_ENV="development"
 #
 
 if [ -e $HOME/.segment ] ; then
-  export GOPATH=$HOME/dev
+# BEGIN GOLANG CONFIGURATION
+export GOPATH="$HOME/dev"
+export PATH="$PATH:$GOPATH/bin"
+source "$GOPATH/src/github.com/segmentio/dotfiles/index.sh"
+# END GOLANG CONFIGURATION
 else
   export GOPATH=$HOME/go
+  export PATH=$GOPATH/bin:$PATH
 fi
-export PATH=$GOPATH/bin:$PATH
 export PATH=/usr/local/opt/go/libexec/bin:$PATH
 export GOPRIVATE=github.com/segment*
 
@@ -74,14 +78,14 @@ export PATH="$HOME/.rd/bin:$PATH"
 #
 
 if [ -e $HOME/.segment ] ; then
-  # BEGIN SEGMENT_TEAM DEFINITION
-  export SEGMENT_TEAM="foundation"
-  # END SEGMENT_TEAM DEFINITION
-  export CONNECTIONS_SERVICE_CLIENT_ID=dev-client-id
-  export CONNECTIONS_SERVICE_CLIENT_SECRET=dev-client-secret
-  export PLATFORM_AUTHZ_CLIENT_ID=dev-client-id
-  export PLATFORM_AUTHZ_CLIENT_SECRET=dev-client-secret
-  # BEGIN LAPTOP SETUP CONFIG PATH INCLUDE
-  export PATH="$PATH:/Users/peterdemartini/dev/src/github.com/segmentio/engineering-laptop-setup/bin"
-  # END LAPTOP SETUP CONFIG PATH INCLUDE
+# BEGIN SEGMENT_TEAM DEFINITION
+export SEGMENT_TEAM="foundation"
+# END SEGMENT_TEAM DEFINITION
+export CONNECTIONS_SERVICE_CLIENT_ID=dev-client-id
+export CONNECTIONS_SERVICE_CLIENT_SECRET=dev-client-secret
+export PLATFORM_AUTHZ_CLIENT_ID=dev-client-id
+export PLATFORM_AUTHZ_CLIENT_SECRET=dev-client-secret
+# BEGIN LAPTOP SETUP CONFIG PATH INCLUDE
+export PATH="$PATH:/Users/peterdemartini/dev/src/github.com/segmentio/engineering-laptop-setup/bin"
+# END LAPTOP SETUP CONFIG PATH INCLUDE
 fi
