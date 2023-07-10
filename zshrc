@@ -73,8 +73,8 @@ alias sort='gsort'
 
 alias gs='git status --short --no-branch --show-stash'
 alias gl='git checkout'
-# This will reset the stage branch from master
-alias gross="git fetch && git checkout master && git reset --hard origin/master && git push origin master:staging --force && git fetch && git checkout staging && git reset --hard origin/staging"
+alias gup='git switch $(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@") && git pull origin $(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@")'
+alias gross='git fetch && git checkout $(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@") && git reset --hard origin/$(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@") && git push origin $(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'):staging --force && git fetch && git checkout staging && git reset --hard origin/staging'
 alias switch-to-branch="git bl --color=always | fzf | awk '{print \$1}' | xargs git checkout"
 alias switch-to-pr="gh pr list | fzf | awk '{print \$1}' | xargs gh pr checkout"
 
@@ -88,6 +88,11 @@ alias kc='kubectl'
 
 alias dc="docker-compose -f docker-compose.yml"
 
+# -- Dates
+
+alias now-utc="date -u +\"%Y-%m-%dT%H:%M:%SZ\""
+alias now="date +\"%Y-%m-%dT%H:%M:%SZ\""
+
 # -- Tab completion
 
 zstyle ':completion:*' use-cache on
@@ -100,10 +105,7 @@ export GPG_TTY=$(tty)
 # -- Segment
 
 if [ -e $HOME/.segment ] ; then
-  segment_dotfiles=(docker general ssh go)
-  for dotfile in $segment_dotfiles ; do
-    source $HOME/dev/src/github.com/segmentio/dotfiles/source/$dotfile.sh
-  done
+  source $HOME/dev/src/github.com/segmentio/dotfiles/index.sh
 
   # Regions
   alias stage-usw2="aws-okta exec stage-read -- "

@@ -17,3 +17,7 @@ set -gx LDFLAGS "-L/usr/local/opt/node@16/lib -L/usr/local/opt/openssl/lib"
 set -gx CPPFLAGS "-I/usr/local/opt/node@16/include -I/usr/local/opt/openssl/include"
 
 set -U __done_min_cmd_duration 10000
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/peterdemartini/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

@@ -63,27 +63,25 @@ export GOPRIVATE=github.com/segment*
 # Docker
 #
 
-export DOCKER_DEFAULT_PLATFORM=linux/amd64
+# export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="$HOME/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 #
 # Segment
 #
 
 if [ -e $HOME/.segment ] ; then
-  export SEGMENT_TEAM=platform
+  # BEGIN SEGMENT_TEAM DEFINITION
+  export SEGMENT_TEAM="foundation"
+  # END SEGMENT_TEAM DEFINITION
   export CONNECTIONS_SERVICE_CLIENT_ID=dev-client-id
   export CONNECTIONS_SERVICE_CLIENT_SECRET=dev-client-secret
   export PLATFORM_AUTHZ_CLIENT_ID=dev-client-id
   export PLATFORM_AUTHZ_CLIENT_SECRET=dev-client-secret
+  # BEGIN LAPTOP SETUP CONFIG PATH INCLUDE
+  export PATH="$PATH:/Users/peterdemartini/dev/src/github.com/segmentio/engineering-laptop-setup/bin"
+  # END LAPTOP SETUP CONFIG PATH INCLUDE
 fi
-# BEGIN ANSIBLE MANAGED BLOCK
-export HOMEBREW_ADDITIONAL_GOOGLE_ANALYTICS_ID='UA-210173764-1'
-# END ANSIBLE MANAGED BLOCK
-# BEGIN GOLANG CONFIGURATION
-export GOPATH="$HOME/dev"
-export PATH="$PATH:$GOPATH/bin"
-source "$GOPATH/src/github.com/segmentio/dotfiles/index.sh"
-# END GOLANG CONFIGURATION
-# BEGIN SEGMENT_TEAM DEFINITION
-export SEGMENT_TEAM="foundation"
-# END SEGMENT_TEAM DEFINITION
