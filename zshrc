@@ -108,10 +108,15 @@ if [ -e $HOME/.segment ] ; then
   source $HOME/dev/src/github.com/segmentio/dotfiles/index.sh
 
   # Regions
-  alias stage-usw2="aws-okta exec stage-read -- "
-  alias prod-usw2="aws-okta exec prod-read -- "
-  alias stage-euw1="aws-okta exec stage-euw1-read -- "
-  alias prod-euw1="aws-okta exec prod-euw1-read -- "
+  alias sr-usw2="aws-okta exec stage-read -- "
+  alias pr-usw2="aws-okta exec prod-read -- "
+  alias sr-euw1="aws-okta exec stage-euw1-read -- "
+  alias pr-euw1="aws-okta exec prod-euw1-read -- "
+  
+  alias sw-usw2="aws-okta exec stage-write -- "
+  alias pw-usw2="aws-okta exec prod-write -- "
+  alias sw-euw1="aws-okta exec stage-euw1-write -- "
+  alias pw-euw1="aws-okta exec prod-euw1-write -- "
 
   # Okta
   export AWS_OKTA_MFA_FACTOR_TYPE=push
